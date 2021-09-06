@@ -15,7 +15,7 @@ header
     .container 
       .row 
         .col-lg-12
-          .nav-social--links
+          .nav-social--links.text-end
             a.link.link-facebook(href="#" title='Facebook APCN')
               i.fab.fa-facebook-f
             a.link.link-youtube(href="#" title='Youtube APCN')
@@ -31,16 +31,22 @@ header
           img.brand(src="assets/logo.svg", alt="Logo APCN")
           p.brand-caption APCN
         .col-lg-3.d-flex.align-items-center
-          form.w-100(action="")
-            .input-group
-              input.form-control.rounded-0.me-2(type='text' placeholder='Buscar')
-              .input-group-append.d-flex.align-items-center
-                i.fas.fa-search.c-cut
+          .navbar-expand-lg.w-100
+            #collapseSearch.collapse.navbar-collapse
+              form.w-100(action="")
+                .input-group.search
+                  input.form-control(type='text' placeholder='Buscar')
+                  .input-group-append.search-append
+                    i.fas.fa-search.c-cut
 
   nav.navbar.navbar-expand-lg
     .container
-      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-        span.navbar-toggler-icon
+      button.navbar-toggle.collapsed.x(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSearch' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle search')
+          i.fas.fa-search.c-primary
       #navbarNav.collapse.navbar-collapse
         ul.navbar-nav
           li.nav-item

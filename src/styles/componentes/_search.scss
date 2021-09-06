@@ -1,0 +1,20 @@
+.search {
+  input {
+    border-radius: 0;
+    @include media-breakpoint-up(lg) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.search-append {
+    display: none;
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.search-collapse {
+
+}

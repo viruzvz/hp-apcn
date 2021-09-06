@@ -1,5 +1,5 @@
 mixin card-ratio(src,text)
-  a(href="#")
+  a.link-card(href="#")
     figure.ratio.ratio-16x9.ratio-figure
       img(src=src, alt="")
       figcaption.caption-card 
@@ -14,12 +14,12 @@ mixin card(src,text)
 mixin artigos(src, text)
   .article-content.spacer-lg
     h4.title-artigo Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-    .d-flex
+    .d-flex.media
       .flex-shrink-0
-        figure(style="width:300px")
+        figure.media-figure
           .ratio.ratio-16x9.ratio-figure
             img(src=src, alt="")
-      .flex-grow-1.ms-3
+      .flex-grow-1.media-caption
         = text
     .date Publicado em 30/12/2021
 
@@ -48,14 +48,15 @@ mixin widget(title, ul, img, video)
 section.hero.hero-item.spacer-lg(role="Apresentação")
   .container
     .row 
-      .col-lg-12
-        .caption 
-          h1.title--hero Comunicados de impressam
-          p.white Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quisquam quibusdam quos rem, harum quaerat modi sed asperiores eveniet perferendis nam aliquam cumque! Voluptatem at, sunt fuga placeat quisquam ducimus!
-        .caption 
-          p.white Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero vitae nesciunt adipisci ad maiores, consequuntur quaerat, ab amet veniam odit sit quas architecto soluta eius! Praesentium quis facere maxime voluptates.
-          a.btn.btn-outline-success.rounded-0(href="#") FILIE-SE
-section.content(role="Conteúdo")
+      .col-lg-8
+        .hero-flex
+          .hero-caption
+            h1.title--hero Comunicados de imprensa
+            p.white Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quisquam quibusdam quos rem, harum quaerat modi sed asperiores eveniet perferendis nam aliquam cumque! Voluptatem at, sunt fuga placeat quisquam ducimus!
+          .hero-caption
+            p.white Lorem ipsum dolor, sit amet
+            a.btn.btn-outline-success.rounded-0(href="#") FILIE-SE
+section.content-vz(role="Conteúdo")
   article
     .container 
       .row.spacer-lg
@@ -100,7 +101,7 @@ section.content(role="Conteúdo")
     .container 
       .row.spacer-lg 
         .col-lg-9
-          article 
+          article.artigos
             h3.title-primary.spacer-lg  Artigos 
             +artigos('https://unsplash.it/1900/800?random&seed=10','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
             +artigos('https://unsplash.it/1900/800?random&seed=11','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
@@ -110,8 +111,8 @@ section.content(role="Conteúdo")
             +artigos('https://unsplash.it/1900/800?random&seed=15','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
             +artigos('https://unsplash.it/1900/800?random&seed=16','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
             +artigos('https://unsplash.it/1900/800?random&seed=17','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
-          .py-1 
-            a.btn.btn-primary(href="#") Próximo
+            .py-1 
+              a.btn.btn-primary(href="#") Próximo
         .col-lg-3
           sidebar 
             section

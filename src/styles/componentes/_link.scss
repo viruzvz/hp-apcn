@@ -3,6 +3,14 @@
 	text-decoration: none;
 }
 
+.link-footer {
+  font-size: 12px;
+  color: #fff;
+  &:hover {
+    color: $secondary;
+  }
+}
+
 .link-nav {
   text-transform: uppercase;
   color: #666;
@@ -47,6 +55,17 @@
   color: $primary;
   &:hover {
     color: $tertiary;
+  }
+}
+
+.link-card {
+  display: flex;
+  .caption-card {
+    background-color:rgba(10,45,61,0.7);
+    transition: background-color 0.5s ease;
+    &:hover {
+      background-color:rgba(10,45,61,0);
+    }
   }
 }
 

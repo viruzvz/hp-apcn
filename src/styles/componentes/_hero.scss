@@ -1,0 +1,53 @@
+.title--hero {
+  font-size: 75px;
+  font-family: robotobold;
+  color: white;
+  margin-bottom: 15px;
+  line-height: 0.9;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 55px;
+  }
+}
+
+.hero {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  background-attachment: fixed;
+  // background-position: 50% center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-head {
+  display: flex;
+  align-items: center;
+  min-height: 130px;
+  background-color: hsla(35, 95%, 59%, 0.8);
+}
+
+.hero-body {
+  display: flex;
+  align-items: center;
+}
+
+.hero-item2 {
+  background-image: url();
+}
+
+.hero-item {
+  background-image: url('../../images/hero.jpg');
+}
+
+@include media-breakpoint-down(lg) {
+  .hero {
+    background-position: -100px top;
+    background-size: initial;
+    height: 500px;
+  }
+
+  .setsubbackground {
+    background-size: 550px;
+  }
+}

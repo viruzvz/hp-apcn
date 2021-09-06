@@ -1,0 +1,120 @@
+mixin card-ratio(src,text)
+  a(href="#")
+    figure.ratio.ratio-16x9.ratio-figure
+      img(src=src, alt="")
+      figcaption.caption-card 
+        = text
+mixin card(src,text)
+  a(href="#")
+    figure.ratio.ratio-16x9.ratio-figure
+      img(src=src, alt="")
+      figcaption.caption-degree 
+        span 
+          = text
+mixin artigos(src, text)
+  .article-content.spacer-lg
+    h4.title-artigo Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+    .d-flex
+      .flex-shrink-0
+        figure(style="width:300px")
+          .ratio.ratio-16x9.ratio-figure
+            img(src=src, alt="")
+      .flex-grow-1.ms-3
+        = text
+    .date Publicado em 30/12/2021
+
+mixin widget(title, ul, img, video)
+  .card-vz
+    h3.title-primary 
+      = title
+    .card-widget
+      if ul
+        ul 
+          li
+            a(href="#") Artigos
+          li
+            a(href="#") Vídeos
+          li
+            a(href="#") Eventos
+          li
+            a(href="#") Publicações
+      if img
+        figure.ratio.ratio-16x9.ratio-figure
+          img.img-fluid(src="https://unsplash.it/800/800?random&seed=17", alt="")
+      if video
+        .ratio.ratio-16x9.ratio-figure
+          iframe(src='https://www.youtube.com/embed/ihe9zV07Lgk' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+section.hero.hero-item.spacer-lg(role="Apresentação")
+  .container
+    .row 
+      .col-lg-12
+        .caption 
+          h1.title--hero Comunicados de impressam
+          p.white Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quisquam quibusdam quos rem, harum quaerat modi sed asperiores eveniet perferendis nam aliquam cumque! Voluptatem at, sunt fuga placeat quisquam ducimus!
+        .caption 
+          p.white Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero vitae nesciunt adipisci ad maiores, consequuntur quaerat, ab amet veniam odit sit quas architecto soluta eius! Praesentium quis facere maxime voluptates.
+          a.btn.btn-outline-success.rounded-0(href="#") FILIE-SE
+section.content(role="Conteúdo")
+  article
+    .container 
+      .row.spacer-lg
+        .col-lg-4
+          +card-ratio('https://unsplash.it/800/600?random&seed=1','Lorem, ipsum dolor sit amet')
+        .col-lg-4
+          +card-ratio('https://unsplash.it/800/600?random&seed=2','Lorem, ipsum dolor')
+        .col-lg-4
+          +card-ratio('https://unsplash.it/800/600?random&seed=3','Lorem, ipsum dolor sit')
+      .row.spacer-lg
+        .col-lg-12
+          #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
+            .carousel-indicators
+              button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+              button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+              button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100(src='https://unsplash.it/900/200?random&seed=4' alt='...')
+              .carousel-item
+                img.d-block.w-100(src='https://unsplash.it/900/200?random&seed=5' alt='...')
+              .carousel-item
+                img.d-block.w-100(src='https://unsplash.it/900/200?random&seed=6' alt='...')
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+
+      .row.spacer-lg
+        .col-lg-12 
+          h3.title-primary Noticias 
+      .row.spacer-lg
+        .col-lg-4
+          +card('https://unsplash.it/1800/600?random&seed=7','Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sequi ad facilis natus, quas ipsa ea,')
+        .col-lg-4
+          +card('https://unsplash.it/800/600?random&seed=8','Lorem ipsum dolor sit amet consectetur adipisicing ,')
+        .col-lg-4
+          +card('https://unsplash.it/900/400?random&seed=9','Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sequi ad facilis natus, quas ipsa ea,')
+
+    .container 
+      .row.spacer-lg 
+        .col-lg-9
+          article 
+            h3.title-primary.spacer-lg  Artigos 
+            +artigos('https://unsplash.it/1900/800?random&seed=10','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
+            +artigos('https://unsplash.it/1900/800?random&seed=11','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
+            +artigos('https://unsplash.it/1900/800?random&seed=12','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
+            +artigos('https://unsplash.it/1900/800?random&seed=13','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
+            +artigos('https://unsplash.it/1900/800?random&seed=14','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
+            +artigos('https://unsplash.it/1900/800?random&seed=15','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
+            +artigos('https://unsplash.it/1900/800?random&seed=16','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
+            +artigos('https://unsplash.it/1900/800?random&seed=17','Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam, nulla possimus eaque dolores architecto incidunt, facere voluptate maxime fugiat voluptas ipsam natus hic deserunt fuga? Explicabo suscipit recusandae illo.')
+          .py-1 
+            a.btn.btn-primary(href="#") Próximo
+        .col-lg-3
+          sidebar 
+            section
+              +widget('Categorias','ul','','')
+              +widget('Filie-se','','img','')
+              +widget('Vídeo','','','video')

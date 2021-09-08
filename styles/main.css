@@ -12827,6 +12827,7 @@ h3 {
     .hero {
         height: 550px;
         background-position: -600px top;
+        background-size: initial;
     }
 }
 .hero-flex {

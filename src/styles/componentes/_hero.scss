@@ -25,7 +25,8 @@
   }
   @include media-breakpoint-down(lg) {
     height: 550px;
-    background-position: -600px top;
+    background-attachment: initial;
+    // background-position: -290px top;
   }
 }
 

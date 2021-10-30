@@ -23,6 +23,10 @@
   font-size: 12px;
 }
 .brand-footer {
-  width: 155px;
+  width: 500px;
   margin-right: 15px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 15px;
+    width: 100%;
+  }
 }

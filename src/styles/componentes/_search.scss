@@ -15,6 +15,14 @@
   }
 }
 
+.search-content {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(lg) {
+    margin-top: 70px;
+  }
+}
+
 .search-collapse {
 
 }
